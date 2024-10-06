@@ -1,5 +1,6 @@
 #include <iostream>
 #include <WinSock2.h>
+#include <WS2tcpip.h>
 
 int main()
 {
@@ -27,7 +28,8 @@ int main()
     WSACleanup();
     return 1;
   }
-  std::cout << "Socket created successfully!" << std::endl;
+  std::cout << "Socket created successfully!" << std::endl
+            << std::endl;
 
   /**
    * Specify an address for the socket.
@@ -35,7 +37,7 @@ int main()
   struct sockaddr_in server_address;
   server_address.sin_family = AF_INET;
   server_address.sin_port = htons(9002);
-  server_address.sin_addr.s_addr = INADDR_ANY;
+  server_address.sin_addr.s_addr = inet_addr("127.0.0.1");
 
   int connection_status = connect(network_socket, (struct sockaddr *)&server_address, sizeof(server_address));
 

@@ -25,4 +25,4 @@ Implements the server-side of TCP communication.
 ### http_server.cpp
 
 Implements the server-side of HTTP communication.
-You can see how HTTP communication relies on TCP sockets by reviewing the code. It illustrates how HTTP is transmitted over TCP. To demonstrate this, run `http_server.exe` in the dist directory and visit `http://localhost:5050`.
+You can see how HTTP communication relies on TCP sockets by reviewing the code. It illustrates how HTTP is transmitted over TCP. <br /> To demonstrate this, run `http_server.exe` in the dist directory and visit `http://localhost:5050`.
